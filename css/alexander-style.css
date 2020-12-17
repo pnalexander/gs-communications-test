@@ -11,6 +11,19 @@
   line-height: 24px;
 }
 
+a {
+  color: #000066;
+}
+a:hover {
+  color: #000;
+}
+
+h2 {
+  color: #000;
+  font-size: 36px;
+  font-weight: 600;
+}
+
 #hero-banner {
   position: relative;
   min-height: 400px;
@@ -58,23 +71,120 @@
 
 #product-details, #contact-form {
   padding-top: 60px;
+  max-width: 90%;
+  margin: 0 auto;
 }
+/* .header-line {
+  height: 2px;
+  width: calc(100% - 30px);
+  display: block;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  top: 30px;
+  z-index: 20;
+  background-color: #4597cb !important;
+} */
+/* h2.section-title {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: #fff;
+  text-align: center;
+  z-index: 40;
+} */
 
 .form-group {
   padding-bottom: 20px;
 }
-.form-control {
+.form-control, .form-control:focus {
   display: block;
   width: 100%;
   height: 45px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  /* color: #000; */
   background-color: #fff;
   border: 1px solid #55565a;
-  border-radius: 4px;
+  outline: none;
+}
+textarea.form-control {
+  height: 90px;
+  border-radius: 0;
+}
+button[type=submit] {
+  width: 160px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid #000;
+}
+button[type=submit]:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.25s;
+}
 
+#product-benefits {
+  background-color: #4597cb;
+  text-align: center;
+  margin-top: 60px;
+  padding: 60px 0;
+}
+#product-benefits h2 {
+  color: #fff;
+  padding: 20px;
+}
+button.btn.btn-light {
+  padding: 10px 40px;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid #fff;
+}
+button.btn.btn-light:hover {
+  color: #fff;
+  background-color: transparent;
+  transition: 0.25s;
+}
+
+#related-products {
+  background-image: url('https://www.syngenta-us.com/prodrender/images/bkg-related-products.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  padding: 60px 0;
+}
+#related-products h2 {
+  text-align: center;
+  color: #fff;
+}
+.related-product {
+  display: block;
+  background-color: #fff;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 90%;
+}
+.related-product p.desc {
+  margin-top: 20px;
+}
+.related-product p.cta a {
+  position: absolute;
+  bottom: 10px;
+  margin-bottom: 0;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -141,6 +251,23 @@
   .hero-banner-callout {
     top: 47%;
     transform: translateY(-50%);
+  }
+
+  /* #related-products {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .clearfix-wrap {
+    flex: 0 0 33.333%;
+    display: flex;
+    padding: 10px;
+  } */
+  .related-product {
+    width: 31.3%;
+    margin: 0 1%;
+    float: left;
+    /* flex: 0 0 100%; */
+    height: 350px;
   }
 }
 
